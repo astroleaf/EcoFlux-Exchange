@@ -1,4 +1,6 @@
 Intro 
+
+
 EcoFlux Exchange is an AI-powered Green Energy Trading Platform that unifies predictive analytics, programmable smart contracts, and real-time market activity into a secure, scalable marketplace for energy assets. Built for researchers, engineers, and energy traders, EcoFlux Exchange delivers end-to-end capabilities—from forecasting and optimization to automated settlement—driving transparency, efficiency, and resilience across dynamic energy markets.
 
 Complete overview
@@ -204,3 +206,4 @@ Phase 2: Expand energy types, enhance AI accuracy, and refine UX
 Phase 3: Multi-market support, governance, and security hardening
 
 Phase 4: Compliance, auditing, and enterprise-grade deployment
+
