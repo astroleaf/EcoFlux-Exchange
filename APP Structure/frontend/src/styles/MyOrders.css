@@ -1,0 +1,77 @@
+.my-orders {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  padding: var(--space-20);
+}
+
+.my-orders__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-20);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.my-orders__header h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.my-orders__filters {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.filter-btn {
+  padding: var(--space-6) var(--space-12);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.filter-btn:hover {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.filter-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.my-orders__body {
+  overflow-x: auto;
+}
+
+.my-orders__loading,
+.my-orders__empty {
+  text-align: center;
+  padding: var(--space-32);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .my-orders__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+
+  .my-orders__filters {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .filter-btn {
+    flex: 1;
+  }
+}

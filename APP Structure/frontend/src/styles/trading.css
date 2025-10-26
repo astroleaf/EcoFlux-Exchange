@@ -1,0 +1,82 @@
+.trading {
+  padding: var(--space-24);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trading__header {
+  margin-bottom: var(--space-32);
+}
+
+.trading__header h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-16);
+}
+
+.trading__energy-selector {
+  display: flex;
+  gap: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.energy-tab {
+  padding: var(--space-12) var(--space-20);
+  background: none;
+  border: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  position: relative;
+}
+
+.energy-tab:hover {
+  color: var(--color-text);
+}
+
+.energy-tab.active {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.trading__container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: var(--space-24);
+  margin-bottom: var(--space-32);
+}
+
+.trading__form,
+.trading__orderbook {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.trading__my-orders {
+  margin-top: var(--space-32);
+}
+
+@media (max-width: 1024px) {
+  .trading__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .trading {
+    padding: var(--space-16);
+  }
+
+  .trading__energy-selector {
+    overflow-x: auto;
+  }
+
+  .energy-tab {
+    padding: var(--space-8) var(--space-16);
+    font-size: var(--font-size-sm);
+  }
+}
