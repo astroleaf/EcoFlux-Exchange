@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    app: green-energy-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: green-energy-backend
+  template:
+    metadata:
+      labels:
+        app: green-energy-backend
+    spec:
+      containers:
+        - name: backend
+          image: green-energy/backend:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: backend-config
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
